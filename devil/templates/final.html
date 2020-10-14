@@ -1,0 +1,95 @@
+{% load static %}
+{% include 'index.html' %}
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" type="text/css" href="{%static 'cssg/mainh.css'%}">
+</head>
+<body>
+<style>
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding-top: 75px;
+
+
+  
+  }
+  .resp {
+  width: 100%;
+  max-width: 900px;
+  height: 99;
+  padding-top: 75px;
+
+
+  
+  }
+</style>
+<div class="main" id="home">
+    
+     <img src="media/images/build.jpg" class="resp" width="600" height="900">
+    </div>
+
+
+  
+{% for i in uf %}
+{% if i.img %}
+<div class="row" id="ima">
+  <div class="column">
+<div class="card">
+ 
+<img src="{{i.img.url}}" alt="Nature" class="responsive" width="600" height="400">
+<div class="container">
+    <h4><b>{{i.title}}</b></h4>
+	
+    <p>{{i.content}}</p>
+    
+    
+    
+
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+<div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About This</h1><br>
+      <h5 class="w3-center">Our passion since 2020</h5>
+      <p class="w3-large">The webiste was created in Maruteru by Mr. Bheemesh.And the maintaince of this website by VarunDhana  
+      <p class="w3-large w3-text-grey w3-hide-medium">Thanks for using this website.we will add new features to it.</p>
+    </div>
+  </div>
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch.</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Andhra Pradesh, Maruteru</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 8247672422</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#ima" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="http://bheemesh.pythonanywhere.com/" title="YourChoice" target="_blank" class="w3-hover-text-green">Your Choice</a></p>
+</footer
+</body>
+
